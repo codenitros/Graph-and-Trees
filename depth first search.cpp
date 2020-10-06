@@ -1,6 +1,7 @@
-
-int vis[]; // vis is visiting array
-std::vector<std::vector<int> > adj // adj is adjacent list;
+#include<bits/stdc++.h>
+using namespace std;
+vector<int>vis; // vis is visiting array
+vector<vector<int> > adj // adj is adjacent list;
 void dfs(int node)
 {
 	vis[node]=1;
@@ -16,6 +17,8 @@ void dfs(int node)
 // Driver code 
 int main() 
 { 
+	vis.resize(4);
+	adj.resize(4, vector<int>(4));
     // Create a graph given in the above diagram 
     Graph g(4); 
     g.addEdge(0, 1); 
